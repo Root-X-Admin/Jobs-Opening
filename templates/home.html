@@ -11,15 +11,23 @@
       height:360px;
       width:100%;
       object-fit:cover;
+      margin-bottom:16px;
     }
   </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" src="https://abe64565-3987-4da4-bf8b-9221479d5af0-00-2gheh7g5pf4d5.sisko.replit.dev/static/banner.jpg" height="320" id="banner">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Jobs Opening</h1>
-    <img class="img-fluid" src="https://abe64565-3987-4da4-bf8b-9221479d5af0-00-2gheh7g5pf4d5.sisko.replit.dev/static/banner.jpg" height="320" id="banner">
-    <h2 class="text-center mt-2 mb-4">About Jobs Careers</h2>
-    <p class="lead">Lorem ipsum odor amet, consectetuer adipiscing elit. Magna quis ultrices efficitur nullam neque. Litora natoque magnis purus mus tincidunt faucibus consequat cubilia. Odio ornare vitae convallis et primis hac. Posuere ipsum magnis auctor pellentesque dapibus, eget proin venenatis. Eros nisl inceptos orci; libero nec ex lacinia. Pretium est magnis enim feugiat nam dis.</p>
+    <div class="row" style="margin-bottom:16px;"">
+      <div class="col-md-6"">
+        <p class="lead">Lorem ipsum odor amet, consectetuer adipiscing elit. Magna quis ultrices efficitur nullam neque. Litora natoque magnis purus mus tincidunt faucibus consequat cubilia. Odio ornare vitae convallis et primis hac. Posuere ipsum magnis auctor pellentesque dapibus, eget proin venenatis. Eros nisl inceptos orci; libero nec ex lacinia. Pretium est magnis enim feugiat nam dis.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6"">
+        <img src="/static/people.jpg" alt="" style="height:320px; border-radius:4px; object-fit:cover;"">
+      </div>
+    </div>
     <h2 class="text-center mt-2 mb-4"">Openings</h2>
     <div>
         {% for job in jobs %}
@@ -28,8 +36,8 @@
     </div>
     <div class="text-center">
       <button class="btn btn-primary btn-lg"">Contact Us</button>
-      <p class="tex-center mt-4"">Copyright 2025, Jobs Opennings</p>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
